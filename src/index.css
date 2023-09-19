@@ -1,0 +1,29 @@
+*{
+  background-color: gray;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+.inputContain {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-top:2rem;
+}
+
+.input {
+  background-color: white;
+  border: black solid 2px;
+}
+
+.butt {
+  background-color:gray;
+  color:black;
+  border: black solid 2px;
+}
+
+.success-alert {
+  text-align: center;
+}
+

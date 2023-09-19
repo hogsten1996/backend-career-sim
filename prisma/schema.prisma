@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+  seed = "node prisma/seed.js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int      @id @default(autoincrement()) @unique
+  username String   @unique
+  password String
+  posts    Post[]
+}
+
+model Post {
+  id      Int    @id @default(autoincrement()) @unique
+  title   String
+  content String
+  userId  Int
+  author  User   @relation(fields: [userId], references: [id])
+}
+
+
